@@ -26,11 +26,19 @@
             <div class="form">
                 <div class="center">
                     <form action = "/uploader" method = "POST" 
-                    enctype = "multipart/form-data">
+                            enctype = "multipart/form-data">
+
+
+
                         <div class="button-wrap">
                             <label class="button" for="upload">UPLOAD DATA</label>
                             <input id="upload" type="file" name='file' multiple>
                         </div>
+                        <div id="myDIV">
+                           Data Uploaded!
+                        </div>
+
+
                         <br/>
                         <button type="submit" class="savedata">VISUALIZE</button>
                     </form>
