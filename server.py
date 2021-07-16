@@ -62,6 +62,8 @@ def save_file():
                 lowTime = dataToInterpret[4]
                 highAcce = dataToInterpret[5]
                 highTime = dataToInterpret[6]
+
+
                 return render_template("home-graph.html",given_dates=date,
                 axis=axis,
                 currentDate=currentDate,
@@ -96,6 +98,38 @@ def save_file():
                 lowTimeZ = dataToInterpret[2][4]
                 highAcceZ = dataToInterpret[2][5]
                 highTimeZ = dataToInterpret[2][6]
+
+                pga = (float(highAcceX)+float(highAcceY))/2
+                print("PGA IS "+str(pga))
+                if(pga<0.0017):
+                    perSha = "Not Felt"
+                    poDa = "None"
+                elif(0.0017<pga and pga<0.014):
+                    perSha = "Weak"
+                    poDa = "None"
+                elif(0.014<pga and pga<0.039):
+                    perSha = "Light"
+                    poDa = "None"
+                elif(0.039<pga and pga<0.092):
+                    perSha = "Moderate"
+                    poDa = "Very Light"
+                elif(0.092<pga and pga<0.18):
+                    perSha = "Strong"
+                    poDa = "Light"
+                elif(0.18<pga and pga<0.34):
+                    perSha = "Very Strong"
+                    poDa = "Moderate"
+                elif(0.34<pga and pga<0.65):
+                    perSha = "Severe"
+                    poDa = "Moderate to Heavy"
+                elif(0.65<pga and pga<1.24):
+                    perSha = "Violent"
+                    poDa = "Heavy"
+                elif(1.24<pga):
+                    perSha = "Extreme"
+                    poDa = "Very Heavy"
+                
+
                 return render_template("home-graph-trio.html",given_dates=date,
                 axisX=axisX,
                 currentDateX=currentDateX,
@@ -109,7 +143,7 @@ def save_file():
                 currentDateY=currentDateY,
                 aveY=aveY,
                 lowAcceY=lowAcceY,
-                lowTime=lowTimeY,
+                lowTimeY=lowTimeY,
                 highAcceY=highAcceY,
                 highTimeY=highTimeY,
 
@@ -119,7 +153,10 @@ def save_file():
                 lowAcceZ=lowAcceZ,
                 lowTimeZ=lowTimeZ,
                 highAcceZ=highAcceZ,
-                highTimeZ=highTimeZ
+                highTimeZ=highTimeZ,
+
+                perSha=perSha,
+                poDa=poDa
                 )
 
 @app.route('/select_date',methods=['GET', 'POST'])
@@ -170,6 +207,37 @@ def selectDate():
         lowTimeZ = dataToInterpret[2][4]
         highAcceZ = dataToInterpret[2][5]
         highTimeZ = dataToInterpret[2][6]
+
+        pga = (float(highAcceX)+float(highAcceY))/2
+        print("PGA IS "+str(pga))
+        if(pga<0.0017):
+            perSha = "Not Felt"
+            poDa = "None"
+        elif(0.0017<pga and pga<0.014):
+            perSha = "Weak"
+            poDa = "None"
+        elif(0.014<pga and pga<0.039):
+            perSha = "Light"
+            poDa = "None"
+        elif(0.039<pga and pga<0.092):
+            perSha = "Moderate"
+            poDa = "Very Light"
+        elif(0.092<pga and pga<0.18):
+            perSha = "Strong"
+            poDa = "Light"
+        elif(0.18<pga and pga<0.34):
+            perSha = "Very Strong"
+            poDa = "Moderate"
+        elif(0.34<pga and pga<0.65):
+            perSha = "Severe"
+            poDa = "Moderate to Heavy"
+        elif(0.65<pga and pga<1.24):
+            perSha = "Violent"
+            poDa = "Heavy"
+        elif(1.24<pga):
+            perSha = "Extreme"
+            poDa = "Very Heavy"
+
         return render_template("home-graph-trio.html",given_dates=date,
             axisX=axisX,
             currentDateX=currentDateX,
@@ -193,7 +261,10 @@ def selectDate():
             lowAcceZ=lowAcceZ,
             lowTimeZ=lowTimeZ,
             highAcceZ=highAcceZ,
-            highTimeZ=highTimeZ
+            highTimeZ=highTimeZ,
+
+            perSha=perSha,
+            poDa=poDa
             )
 
 
