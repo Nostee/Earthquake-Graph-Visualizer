@@ -1,0 +1,71 @@
+.login-page {
+  width: 500px;
+  padding: 8% 0 0;
+  margin: auto;
+  
+}
+.form {
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form .title {
+  font-size: 20px;
+  letter-spacing: 20px;
+  line-height: 1px;
+  font-weight:100;
+  padding-left: 1em; 
+}
+
+.form .subtitle {
+  letter-spacing: 10px;
+  font-size: 45px;
+  line-height: 1px;
+  font-weight: bold;
+}
+
+.form .sub-subtitle {
+  font-size: 15px;
+  line-height: 1px;
+  font-weight:100;
+}
+
+.login_submit {
+  border: 0;
+  font-weight:lighter;
+  border-radius: 20px;
+  outline: 0;
+  font-size: 15px;
+  background: #43A047;
+  color: #FFFFFF;
+  padding: 10px;
+  cursor: pointer;
+}
+
+body {
+  background: linear-gradient(-45deg, #046be1, #000000, #000000, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}

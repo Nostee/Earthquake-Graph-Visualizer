@@ -1,0 +1,33 @@
+Number of Floors: 24
+Total Floor Area: 42816sqmeters
+Year Built: 1997
+City: Mandaluyong
+Structural Framing: Dual System (shear walls for elevator shafts and a beam-column configuration)
+Building: Made from Steel with precast Concrete Floorings
+
+Dataset 1 - (FLOOR 10)
+Dataset 2 - (FLOOR 24)
+Dataset 3 - (FLOOR -3)
+
+
+(continuous wave form)
+acceleration data ung mga numbers , unit is g, vibration.
+
+pwede siya iconvert sa intensity
+
+https://www.researchgate.net/publication/326176215_Seismic_Vulnerability_Assessment_of_Adamson_University_Buildings'_As-Built_using_Fragility_Curves
+
+lowrise- basement, 5 story building. (1)
+highrise- more than 5 story bldg.
+
+https://www.dpwh.gov.ph/DPWH/sites/default/files/RulesonEarthquake_Accelerograph.pdf nakalagay dito kung ilan ung device na need if low rise or high rise.
+
+how to know location:
+run simulations, 
+how to pinpoint kung saan part ng floor
+
+green, yellow, red
+
+
+email if may need:
+markrommelcollado@gmail.com
