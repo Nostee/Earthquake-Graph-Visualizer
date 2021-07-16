@@ -14,49 +14,32 @@
         <br/>
         <br/>
     </div>
-    <div class="container">
+    <div class="container1">
         <div>
         </div>
-        <div class="right">
+        <div class="center">
+            <img src=/static/assets/UsherLogo.png alt="UsherLogo" height="100px">
+            <h2 class="subtitle">
+                V I S U A L I Z E D
+            </h2>
+            <br/>
             <div class="form">
-                <div class="grid-container">
-                    <div class="item1">
-                        <div class="left">
-                            <form action = "/uploader" method = "POST" 
-                            enctype = "multipart/form-data">
-                                <div class="button-wrap">
-                                    <label class="button" for="upload">UPLOAD DATA</label>
-                                    <input id="upload" type="file" name='file'>
-                                </div>
-                                <br/>
-                                <button type="submit" class="savedata">GENERATE DATA</button>
-                            </form>
+                <div class="center">
+                    <form action = "/uploader" method = "POST" 
+                    enctype = "multipart/form-data">
+                        <div class="button-wrap">
+                            <label class="button" for="upload">UPLOAD DATA</label>
+                            <input id="upload" type="file" name='file' multiple>
                         </div>
                         <br/>
-                        <form action="/">
-                            <div class="left">
-                                <button type="submit" class="back">GO BACK</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="item2">
-                        <div class="sidebyside">
-                            <h2 class="subtitle">
-                                V I S U A L I Z E D
-                            </h2>
-                            <h3 class="sub-subtitle">
-                                A Data Analysis and Visualization Tool
-                            </h3>
-                            <br/>
-                        </div>
-                        <img src=/static/assets/UsherLogo.png alt="UsherLogo" height="100px">
-                    </div>
+                        <button type="submit" class="savedata">VISUALIZE</button>
+                    </form>
+                    <br/>
+                    <form action="/">
+                        <button type="submit" class="back">GO BACK</button>
+                    </form>  
                 </div>
             </div>
-            <br/>
-        </div>
-        <div class="center">
-
         </div>
     </div>
   </body>

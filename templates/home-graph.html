@@ -15,35 +15,56 @@
     </div>
     <div class="container">
         <div class="right">
-            <div class="form">
-                <div class="grid-container">
-                    <div class="item1">
-                        <form action="/home">
-                            <div class="left">
-                                <button type="submit" class="back">GO BACK</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="item2">
-                        <div class="sidebyside">
-                            <h2 class="subtitle">
-                                V I S U A L I Z E D
-                            </h2>
-                            <h3 class="sub-subtitle">
-                                A Data Analysis and Visualization Tool
-                            </h3>
-                            <br/>
+            <div class="grid-container">
+                <div class="item1">
+                    <form action="/home">
+                        <div class="left">
+                            <button type="submit" class="back">GO BACK</button>
                         </div>
-                        <img src=/static/assets/UsherLogo.png alt="UsherLogo" height="100px">
+                    </form>
+                    <br/>
+                    <form method="POST" action="/select_date">
+                        <div class="left">
+                            <button type="submit" class="back">REFRESH</button>
+                        </div>
+                        <br/>
+                        <div class="left">
+                            <div class="select">
+                                <select name="select_dates" id="dates">
+                                    {% for x in given_dates %}
+                                    <option value= "{{x}}" SELECTED>{{x}}</option>"
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="item2">
+                    <div class="sidebyside">
+                        <h2 class="subtitle">
+                            V I S U A L I Z E D
+                        </h2>
+                        <h3 class="sub-subtitle">
+                            A Data Analysis and Visualization Tool
+                        </h3>
+                        <br/>
                     </div>
+                    <img src=/static/assets/UsherLogo.png alt="UsherLogo" height="100px">
                 </div>
             </div>
-            <br/>
-        </div>
-        <div class="center">
-            <img src=/static/assets/plot.png alt="UsherLogo" height="500px">
         </div>
     </div>
+    <div class="center">
+        <img src=/static/assets/plot1.png alt="UsherLogo" height="650px">
+        <img src=/static/assets/plot2.png alt="UsherLogo" height="650px">
+        <img src=/static/assets/plot3.png alt="UsherLogo" height="650px">
+        <img src=/static/assets/plot4.png alt="UsherLogo" height="650px">
+        <img src=/static/assets/plot5.png alt="UsherLogo" height="650px">
+        <img src=/static/assets/plot6.png alt="UsherLogo" height="650px">
+    </div>
+    <br/>
+    <br/>
+    <br/>
   </body>
 </html>
   

@@ -9,3 +9,4 @@ flask
 pandas
 bokeh
 seaborn
+pip install flask[async]
