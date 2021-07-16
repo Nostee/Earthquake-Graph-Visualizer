@@ -560,6 +560,8 @@
  #dates {
     position: relative;
     display: flex;
+    color: white;
+    text-align: center;
     width: 11em;
     height: 3em;
     line-height: 5;
