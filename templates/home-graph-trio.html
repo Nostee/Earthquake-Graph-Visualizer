@@ -19,15 +19,16 @@
                 <div class="item1">
                     <form action="/home">
                         <div class="left">
-                            <button style="background: #1f1f1f;" type="submit" class="back1">GO BACK</button>
+                            <button style="background: #1f1f1f;" type="submit" class="back">GO BACK</button>
                         </div>
+            
                     </form>
                     <br/>
                     <form method="POST" action="/select_date">
                         <div class="left">
-                            <button style="background-color:#046be1;" type="submit" class="back1">REFRESH</button>
+                            <button style="background-color:#046be1;" type="submit" class="savedata">REFRESH</button>
                         </div>
-                        <br/>
+                        <br/> <br/>
                         <div style="position: relative; top:-15px;" class="left">
                             <div class="select">
                                 <select style="width: 90px;" name="select_dates" id="dates">
@@ -59,6 +60,7 @@
         <div class="center">
             <h2>DATA ANALYSIS</h2>
             <div class="left">
+                <div id="contii">
                 <p>Axis: {{axisX}}</p>
                 <p>Current Date: {{currentDateX}}</p>
                 <p>Average: {{aveX}}</p>
@@ -66,7 +68,9 @@
                 <p>Time: {{lowTimeX}}</p>
                 <p>Fastest Acceleration Record: {{highAcceX}}</p>
                 <p>Time: {{highTimeX}}</p>
+                </div>
                 <br/>
+                <div id="contiii">
                 <p>Axis: {{axisY}}</p>
                 <p>Current Date: {{currentDateY}}</p>
                 <p>Average: {{aveY}}</p>
@@ -74,7 +78,9 @@
                 <p>Time: {{lowTimeY}}</p>
                 <p>Fastest Acceleration Record: {{highAcceY}}</p>
                 <p>Time: {{highTimeY}}</p>
+                </div>
                 <br/>
+                <div id="contiiii">
                 <p>Axis: {{axisZ}}</p>
                 <p>Current Date: {{currentDateZ}}</p>
                 <p>Average: {{aveZ}}</p>
@@ -82,11 +88,20 @@
                 <p>Time: {{lowTimeZ}}</p>
                 <p>Fastest Acceleration Record: {{highAcceZ}}</p>
                 <p>Time: {{highTimeZ}}</p>
-                <br/>
+                
+                </div>
+                <div class="center" id="conti">
                 <p>Perceived Shaking: {{perSha}}</p>
                 <p>Potential Damage: {{poDa}}</p>
             </div>
-            <img src=/static/assets/mercalli.png alt="Mercalli" height="350px"/>
+            </div>
+            </div>
+            <br/>
+            <div class="margin">
+            <img src=/static/assets/mercalli.png alt="Mercalli" height="350px"/></div> 
+            <br/>
+            <p class="center" style="font-size: 20px; font-weight: bold;"> Instrumental Intensity Scale</p> 
+              
         </div>
     </div>
 

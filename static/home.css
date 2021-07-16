@@ -27,6 +27,83 @@
   animation: transitionIn 0.75s;
 }
 
+#contis {
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  background: #43A047;
+  max-width: 200px;
+  max-height: 400px;
+  margin-left: 400px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#conti {
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  background: #43A047;
+  max-width: 200px;
+  margin: 0;
+  padding: 45px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 400px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contii {
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  background: #43A047;
+  max-width: 200px;
+  max-height: 400px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contiii {
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  background: #43A047;
+  max-width: 200px;
+  max-height: 400px;
+  margin-top: -420px;
+  margin-left: 400px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contiiii {
+
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  background: #43A047;
+  max-width: 200px;
+  max-height: 400px;
+  padding: 45px;
+  margin-top: -418px;
+  margin-left: 800px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.margin {
+ margin-left: 225px;
+
+}
 @keyframes transitionIn {
   from {
       opacity: 0;

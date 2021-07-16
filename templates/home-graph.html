@@ -19,15 +19,16 @@
                 <div class="item1">
                     <form action="/home">
                         <div class="left">
-                            <button style="background: #1f1f1f;" type="submit" class="back1">GO BACK</button>
+                            <button style="background: #1f1f1f;" type="submit" class="back">GO BACK</button>
                         </div>
                     </form>
                     <br/>
                     <form method="POST" action="/select_date">
                         <div class="left">
-                            <button style="background-color:#046be1;" type="submit" class="back1">REFRESH</button>
+                            <button style="background-color:#046be1;" type="submit" class="savedata">
+                               REFRESH</button>
                         </div>
-                        <br/>
+                        <br/><br/>
                         <div style="position: relative; top:-15px;" class="left">
                             <div class="select">
                                 <select style="width: 90px;" name="select_dates" id="dates">
@@ -59,6 +60,7 @@
         <div class="center">
             <h2>DATA ANALYSIS</h2>
             <div class="left">
+                <div id="contis">
                 <p>Axis: {{axis}}</p>
                 <p>Current Date: {{currentDate}}</p>
                 <p>Average: {{ave}}</p>
@@ -67,7 +69,8 @@
                 <p>Fastest Acceleration Record: {{highAcce}}</p>
                 <p>Time: {{highTime}}</p>
             </div>
-            <img src=/static/assets/mercalli.png alt="Mercalli" height="300px"/>
+            </div>
+            
         </div>
     </div>
 
