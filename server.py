@@ -38,7 +38,6 @@ def save_file():
             return render_template("home-choose-data.html")
         else:
             x = 1
-            
             for file in files:
                 print(file.filename)
                 axis = file.filename[-5]
@@ -53,16 +52,148 @@ def save_file():
             # f.save("./static/assets/"+f.filename)
 
             numberOfFiles = x-1
-            date = gg.caller(x,axis)
+            date,dataToInterpret = gg.caller(x,axis)
             print("SUCCESSS")
-            return render_template("home-graph.html",given_dates=date)
+            if(len(dataToInterpret)==7):
+                axis = dataToInterpret[0]
+                currentDate = dataToInterpret[1]
+                ave = dataToInterpret[2]
+                lowAcce = dataToInterpret[3]
+                lowTime = dataToInterpret[4]
+                highAcce = dataToInterpret[5]
+                highTime = dataToInterpret[6]
+                return render_template("home-graph.html",given_dates=date,
+                axis=axis,
+                currentDate=currentDate,
+                ave=ave,
+                lowAcce=lowAcce,
+                lowTime=lowTime,
+                highAcce=highAcce,
+                highTime=highTime
+                )
+            else:
+                # For X
+                axisX = dataToInterpret[0][0]
+                currentDateX = dataToInterpret[0][1]
+                aveX = dataToInterpret[0][2]
+                lowAcceX = dataToInterpret[0][3]
+                lowTimeX = dataToInterpret[0][4]
+                highAcceX = dataToInterpret[0][5]
+                highTimeX = dataToInterpret[0][6]
+                # For Y
+                axisY = dataToInterpret[1][0]
+                currentDateY = dataToInterpret[1][1]
+                aveY = dataToInterpret[1][2]
+                lowAcceY = dataToInterpret[1][3]
+                lowTimeY = dataToInterpret[1][4]
+                highAcceY = dataToInterpret[1][5]
+                highTimeY = dataToInterpret[1][6]
+                # For Z
+                axisZ = dataToInterpret[2][0]
+                currentDateZ = dataToInterpret[2][1]
+                aveZ = dataToInterpret[2][2]
+                lowAcceZ = dataToInterpret[2][3]
+                lowTimeZ = dataToInterpret[2][4]
+                highAcceZ = dataToInterpret[2][5]
+                highTimeZ = dataToInterpret[2][6]
+                return render_template("home-graph-trio.html",given_dates=date,
+                axisX=axisX,
+                currentDateX=currentDateX,
+                aveX=aveX,
+                lowAcceX=lowAcceX,
+                lowTimeX=lowTimeX,
+                highAcceX=highAcceX,
+                highTimeX=highTimeX,
+
+                axisY=axisY,
+                currentDateY=currentDateY,
+                aveY=aveY,
+                lowAcceY=lowAcceY,
+                lowTime=lowTimeY,
+                highAcceY=highAcceY,
+                highTimeY=highTimeY,
+
+                axisZ=axisZ,
+                currentDateZ=currentDateZ,
+                aveZ=aveZ,
+                lowAcceZ=lowAcceZ,
+                lowTimeZ=lowTimeZ,
+                highAcceZ=highAcceZ,
+                highTimeZ=highTimeZ
+                )
 
 @app.route('/select_date',methods=['GET', 'POST'])
 def selectDate():
     print("Current axis is"+axis)
     print("Current no. of files is"+str(numberOfFiles))
     select = request.form.get('select_dates')
-    date = gg.refresh(select,axis,numberOfFiles)
-    return render_template("home-graph.html",given_dates=date)
+    date,dataToInterpret = gg.refresh(select,axis,numberOfFiles)
+    if(len(dataToInterpret)==7):
+        axisR = dataToInterpret[0]
+        currentDate = dataToInterpret[1]
+        ave = dataToInterpret[2]
+        lowAcce = dataToInterpret[3]
+        lowTime = dataToInterpret[4]
+        highAcce = dataToInterpret[5]
+        highTime = dataToInterpret[6]
+        return render_template("home-graph.html",given_dates=date,
+        axis=axisR,
+        currentDate=currentDate,
+        ave=ave,
+        lowAcce=lowAcce,
+        lowTime=lowTime,
+        highAcce=highAcce,
+        highTime=highTime
+        )
+    else:
+        # For X
+        axisX = dataToInterpret[0][0]
+        currentDateX = dataToInterpret[0][1]
+        aveX = dataToInterpret[0][2]
+        lowAcceX = dataToInterpret[0][3]
+        lowTimeX = dataToInterpret[0][4]
+        highAcceX = dataToInterpret[0][5]
+        highTimeX = dataToInterpret[0][6]
+        # For Y
+        axisY = dataToInterpret[1][0]
+        currentDateY = dataToInterpret[1][1]
+        aveY = dataToInterpret[1][2]
+        lowAcceY = dataToInterpret[1][3]
+        lowTimeY = dataToInterpret[1][4]
+        highAcceY = dataToInterpret[1][5]
+        highTimeY = dataToInterpret[1][6]
+        # For Z
+        axisZ = dataToInterpret[2][0]
+        currentDateZ = dataToInterpret[2][1]
+        aveZ = dataToInterpret[2][2]
+        lowAcceZ = dataToInterpret[2][3]
+        lowTimeZ = dataToInterpret[2][4]
+        highAcceZ = dataToInterpret[2][5]
+        highTimeZ = dataToInterpret[2][6]
+        return render_template("home-graph-trio.html",given_dates=date,
+            axisX=axisX,
+            currentDateX=currentDateX,
+            aveX=aveX,
+            lowAcceX=lowAcceX,
+            lowTimeX=lowTimeX,
+            highAcceX=highAcceX,
+            highTimeX=highTimeX,
+
+            axisY=axisY,
+            currentDateY=currentDateY,
+            aveY=aveY,
+            lowAcceY=lowAcceY,
+            lowTime=lowTimeY,
+            highAcceY=highAcceY,
+            highTimeY=highTimeY,
+
+            axisZ=axisZ,
+            currentDateZ=currentDateZ,
+            aveZ=aveZ,
+            lowAcceZ=lowAcceZ,
+            lowTimeZ=lowTimeZ,
+            highAcceZ=highAcceZ,
+            highTimeZ=highTimeZ
+            )
 
 
