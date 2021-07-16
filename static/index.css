@@ -171,6 +171,7 @@
 .login_submit:hover {
   background:#28702b ;
   cursor: pointer;
+  transform: scale(1.04);
 
 
 }
@@ -187,6 +188,9 @@
   opacity: .1;
   transition: .7;
 
+}
+.login_submit:active{
+  transform: scale(.95);
 }
 
 
