@@ -251,7 +251,7 @@ def selectDate():
             currentDateY=currentDateY,
             aveY=aveY,
             lowAcceY=lowAcceY,
-            lowTime=lowTimeY,
+            lowTimeY=lowTimeY,
             highAcceY=highAcceY,
             highTimeY=highTimeY,
 
